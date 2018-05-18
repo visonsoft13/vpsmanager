@@ -1,8 +1,8 @@
 #!/bin/bash
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
 tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
-echo "● Instalar e configurar o proxy squid nas portas 80, 3128, 8080 e 8799" ; echo "  para permitir conexões SSH para este servidor"
-echo "● Configurar o OpenSSH para rodar nas portas 22 e 443"
+echo "● Instalar e configurar o proxy squid nas portas 80 e 443" ; echo "  para permitir conexões SSH para este servidor"
+echo "● Configurar o OpenSSH para rodar nas portas 22 e 144"
 echo "● Instalar um conjunto de scripts como comandos do sistema para o gerenciamento de usuários" ; tput sgr0
 echo ""
 tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
@@ -109,6 +109,14 @@ then
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
+	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/userbackup.sh -O /bin/userbackup
+	chmod +x /bin/userbackup
+	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/badvpnsetup2.sh -O /bin/badvpnsetup
+	chmod +x /bin/badvpnsetup
+	wget https://raw.githubusercontent.com/visonsoft13/Socks/master/socks -O /bin/socks
+	chmod +x /bin/socks
+	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/banner.sh -O /bin/banner
+	chmod +x /bin/banner
 	
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -171,8 +179,8 @@ then
 	fi
 fi
 echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8799" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH rodando nas portas 22 e 443" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80 e 443" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH rodando nas portas 22 e 144" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Scripts para gerenciamento de usuário instalados" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Leia a documentação para evitar dúvidas e problemas!" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Para ver os comandos disponíveis use o comando: ajuda" ; tput sgr0
