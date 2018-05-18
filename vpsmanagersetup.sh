@@ -108,15 +108,6 @@ then
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
-	chmod +x /bin/sshmonitor
-	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/userbackup.sh -O /bin/userbackup
-	chmod +x /bin/userbackup
-	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/badvpnsetup2.sh -O /bin/badvpnsetup
-	chmod +x /bin/badvpnsetup
-	wget https://raw.githubusercontent.com/visonsoft13/Socks/master/socks -O /bin/socks
-	chmod +x /bin/socks
-	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/banner.sh -O /bin/banner
-	chmod +x /bin/banner
 	
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
