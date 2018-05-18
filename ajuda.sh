@@ -10,8 +10,4 @@ tput setaf 2 ; tput bold ; printf '%s' "mudardata " ; tput setaf 7 ; printf '%s'
 tput setaf 2 ; tput bold ; printf '%s' "remover " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Remover um usuário SSH" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "sshlimiter " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Limitador de conexões SSH simultâneas (deve ser executado em uma sessão screen)" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "sshmonitor " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Verifica o número de conexão simutânea de cada usuário" ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "userbackup " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Cria uma cópia de todos os usuários e senhas" ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "badvpnsetup " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Compila e instala automaticamente o programa BadVPN" ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "socks " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Ativa o proxy Socks nas portas 80 e 443" ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "banner " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Criar um banner em seu vps" ; echo ""
 tput sgr0
