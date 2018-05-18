@@ -109,6 +109,12 @@ then
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
+	wget https://raw.githubusercontent.com/visonsoft13/Full/master/scripts/firewall.sh -O /bin/firewall
+	chmod +x /bin/firewall
+	wget https://raw.githubusercontent.com/visonsoft13/Full/master/scripts/firewall2.sh -O /bin/firewall2
+	chmod +x /bin/firewall2
+	wget https://raw.githubusercontent.com/visonsoft13/Full/master/scripts/torrent.sh -O /bin/torrent
+	chmod +x /bin/torrent
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
 		service squid3 reload > /dev/null
