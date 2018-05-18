@@ -1,7 +1,7 @@
 #!/bin/bash
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
 tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
-echo "● Instalar e configurar o proxy squid nas portas 80, 8799, 3128, 8080" ; echo "  para permitir conexões SSH para este servidor"
+echo "● Instalar e configurar o proxy squid nas portas 80, 3128, 8080 e 8799" ; echo "  para permitir conexões SSH para este servidor"
 echo "● Configurar o OpenSSH para rodar nas portas 22 e 443"
 echo "● Instalar um conjunto de scripts como comandos do sistema para o gerenciamento de usuários" ; tput sgr0
 echo ""
@@ -108,7 +108,7 @@ then
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/visonsoft13/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
-	
+	chmod +x /bin/sshmonitor
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
 		service squid3 reload > /dev/null
@@ -170,7 +170,7 @@ then
 	fi
 fi
 echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80, 8799, 3128, 8080" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid Instalado e rodando nas portas: 80, 3128, 8080 e 8799" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH rodando nas portas 22 e 443" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Scripts para gerenciamento de usuário instalados" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Leia a documentação para evitar dúvidas e problemas!" ; tput sgr0
